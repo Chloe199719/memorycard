@@ -15,6 +15,7 @@ import demigirlFlag from "./components/assets/Demigirl_Flag.svg.png";
 import demiboyFlag from "./components/assets/demiboyflag.jpg";
 import nonbinaryFlag from "./components/assets/nonbinaryFlag.png";
 import Main from "./components/main";
+import Footer from "./components/footer";
 
 export class App extends Component {
   constructor() {
@@ -83,6 +84,7 @@ export class App extends Component {
           score={this.state.score}
           bestScore={this.state.bestscore}
         />
+        <Footer />
       </>
     );
   }
