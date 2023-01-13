@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7a598448.css",
+    "main.js": "/static/js/main.1d6f439d.js",
+    "static/media/Polyamory_Pride_Flag.svg.png": "/static/media/Polyamory_Pride_Flag.svg.0ddc5c5bbef9204a64b9.png",
+    "index.html": "/index.html",
+    "main.7a598448.css.map": "/static/css/main.7a598448.css.map",
+    "main.1d6f439d.js.map": "/static/js/main.1d6f439d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a598448.css",
+    "static/js/main.1d6f439d.js"
+  ]
+}
