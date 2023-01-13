@@ -7,6 +7,13 @@ import lesbianflag from "./components/assets/lesbianflag.jpg";
 import pansexualflag from "./components/assets/pansexualflag.png";
 import bisexual from "./components/assets/Bisexual_Pride_Flag.svg.png";
 import transflag from "./components/assets/transflag.png";
+import asexualFlag from "./components/assets/Asexual_flag.png";
+import demisexualFlag from "./components/assets/demisexual-flag.png";
+import agender from "./components/assets/agenderflag.jpg";
+import Polyamory from "./components/assets/Polyamory_Pride_Flag.svg.png";
+import demigirlFlag from "./components/assets/Demigirl_Flag.svg.png";
+import demiboyFlag from "./components/assets/demiboyflag.jpg";
+import nonbinaryFlag from "./components/assets/nonbinaryFlag.png";
 import Main from "./components/main";
 
 export class App extends Component {
@@ -14,11 +21,18 @@ export class App extends Component {
     super();
     this.state = {
       img: [
-        { flag: gayflag, clicked: false },
-        { flag: lesbianflag, clicked: false },
-        { flag: pansexualflag, clicked: false },
-        { flag: bisexual, clicked: false },
-        { flag: transflag, clicked: false },
+        { flag: gayflag, clicked: false, desc: `Gay Flag` },
+        { flag: lesbianflag, clicked: false, desc: `Lesbian Flag` },
+        { flag: pansexualflag, clicked: false, desc: `Pansexual Flag` },
+        { flag: bisexual, clicked: false, desc: `Bisexual Flag` },
+        { flag: transflag, clicked: false, desc: `Trans Flag` },
+        { flag: asexualFlag, clicked: false, desc: "ASexual Flag" },
+        { flag: demisexualFlag, clicked: false, desc: "DemiSexual Flag" },
+        { flag: agender, clicked: false, desc: `Agender Flag` },
+        { flag: Polyamory, clicked: false, desc: "Polyarmory Flag" },
+        { flag: demigirlFlag, clicked: false, desc: "DemiGirl Flag" },
+        { flag: demiboyFlag, clicked: false, desc: `DemiBoy Flag` },
+        { flag: nonbinaryFlag, clicked: false, desc: `NonBinary Flag` },
       ],
       score: 0,
       bestscore: 0,
@@ -55,6 +69,9 @@ export class App extends Component {
   };
   componentDidUpdate() {
     this.checkBestScore();
+  }
+  componentDidMount() {
+    this.shuffle();
   }
   render() {
     return (

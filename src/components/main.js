@@ -7,25 +7,31 @@ export class Main extends Component {
   }
   render() {
     return (
-      <div>
-        <div> {this.props.score}</div>
-        <div> BestScore: {this.props.bestScore}</div>
-        {this.props.img.map((obj, i) => {
-          console.log(obj.clicked);
-          return (
-            <img
-              src={obj.flag}
-              alt=""
-              key={uniqid()}
-              width="400px"
-              height="200px"
-              onClick={() => {
-                this.props.gameLogic(i);
-              }}
-            ></img>
-          );
-        })}
-      </div>
+      <main>
+        <section className="scores">
+          <div className="curScore">Current Score: {this.props.score}</div>
+          <div className="bestScore"> BestScore: {this.props.bestScore}</div>
+        </section>
+
+        <section className="flags">
+          {this.props.img.map((obj, i) => {
+            return (
+              <div key={uniqid()}>
+                <img
+                  src={obj.flag}
+                  alt=""
+                  width="400px"
+                  height="200px"
+                  onClick={() => {
+                    this.props.gameLogic(i);
+                  }}
+                ></img>
+                <p>{obj.desc}</p>
+              </div>
+            );
+          })}
+        </section>
+      </main>
     );
   }
 }
